@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lalocura Impresiones 3Ds · Tijuana</title>
+<meta name="description" content="Lalocura Impresiones 3Ds — servicio de impresión 3D en PLA en Tijuana con Bambu Lab A1. Se cobra por gramo de filamento usado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plate:#DCDFD8;
+  --paper:#F3F4F0;
+  --ink:#16221C;
+  --ink-2:#56605A;
+  --line:#C3C8BE;
+  --filament:#FF4D00;
+  --filament-soft:#FFD9C7;
+  --gold:#D9A93C;
+  --logo:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdQAAABICAMAAAB4KvTSAAAAYFBMVEX////9//////33//37//j+//L+/v7+/vz//f76/v7+/P78/P78/Pz9+/76+f7+/fr+/fb7/ff8+vr5+fP29fPx8u3q6uPa2dDCwrivr6Ofn5GDg3tdXFE6OjIdHA8GBgKaP1LoAAAfMUlEQVR42u1dCWObOrOVaQy2JbMILez8/3/5zhmB7aTpkuXeL6+3ctMYEJKYM5tGI6LM9W/5g4q2VXtURl+ffbT50h+UP3q8v6r/3fWXHwG1acyzz9cvf/p4f1Xf/OxjyhNBffr27PP1y58+3l/V//azzxmg1urp29/yJ5VSA1Rzfl6++qDPf/h4f1X//ItSnl2tavu8mC9e7B8+3l/Vtz8v5tsZNrWuq8fP1y9/+nh/Vb/+6ccKqEWmHj+3crJOn4Kxt2OjlPNenfL0waHGobtd385fVNDKOav+qfKD8X7Z8tbx/qp+9tOPOh+gfn/YT+zGcRzGt5YOQAejjPpb/iflrMrLD0GNy/pKefXk8zJ5FZSyf8n7BUEd1+kVOfy15K5LB0TdX+p+RVDnJSgPibsVpxVE8C6B3vtg7xX0VsalB6L+r6R+RVCnNYqXlG9FaaP8NN8Kvk7T4MLt+k3CB6+V/yuqX1JS12Cdsv5hDqTic6O6rJN1LydK49pZ7/4K6lcFVelcP5wxAHXubiV2wzJb+70tpvr9a1S/KKjRcmZ6O+G0BqgUWJt7jfM4nOwrDlZPCf9L3f9ROejS/sSmvlZmq3LfzcsUck9t/Nqkp9fKPRPxv+XLg+pkBjsp+zqo69rnAPUvdb8iqFC/ULHO3rxbWMmwzsrYYR39ssKDgjb2Ln9RoH6VN3/V7xcFte9elNgRRTWsU7euEMbw6Dft5S+o///Ur7Y2JPXrAOpf9fv/DdRlfizTNM/LMjtlXBinUbng4osqUv46Sl/cpnIN7bY660wOI8pLHnMWKthAbfxyEfd9U5oDy/Y9Y3n4+t3x/bbtYlEUchbf0tWfLF09NJF9d/rVrh6/saPn9b7v4Pnn+yHfe3z5uOmYT3NIl7OiKh6qvfIg2VtBVfnDEhrmMsqvy7OwPkB9bZ6aq4ew4Y+KSbKcO6d0WfrD+XwGrnigoqqenqrCHVTpiqppm+qpbZssz095UdVcNi52p6zYlo1ZKt65/QYpnvDDj9Q9odiTvVRZ5uvK4V+VSa3idEIrqdMqpXVtzReV9LVdSp2i/eOxftpXq+W+os2ylg6l1nzki976vX0e66Z2C+FgXuG32+J35t2lPF0u7fHYPNmDb9rK4vsRsFrn2qZpqgqUOp0ueJrbsKoX+IGO5Y8l6ntQnVjTZ4tvk8o/BmquMTx9KJ3k19xBfTqX+lq6um7bp+qpIaik/6ug1iT1M1ATQJWAWmygeqMK58AsLUv2AGp+65Sl3kGtbxwiveavgpoXpL3NtJVHzgnq6+UO6mED9ekZqKEuMgc31LVH75uzadF5Vh0DBgsMrGvwQNaW5QVFUP0UUDFu1Y/jtM4ipcs6jEN8NUz4FlCtL1rfHM6CKjE9bZJ6KLUu6mNrzwWPM0GmEOKcbqXYiQ4K7A8q59gaSX4SUrKqujiXFQ0vty7LLO8+PbT0QH458bzRhHSCdwcpMVZTtc75lnrwRHoXz8sroObCn8XWqN6VTVvVLZr3YBwAChmtW1cd2yOxtFTEVWWN1pcN1VNqvVAfA1Vp1h6WMTiv9LJ4q15xh34XVNFWORPKfVV4Ub/nQhBLqB6MAr3a1pZnPlCRb8S/g1k8w6M4vUT1cCD5dlCNc654CiGGLMNXdXpRLqncQd3b3BEUIOpqX2LctUVbeejFFnU4zEtW/ADVG6hpPEnL4DthElDDkSW0x+ADjETrj607th4s02SF87QPjTWXNNJ91N/R+W2gcuElWKP6deGq24yZqnKvrLC9CVRtmxC89+7cCKgYuZAROg5GMRxjjN6VKnH1d2J1QzUp0kelVBQJUtYt5OGdyirnjzUUg1MXmxWvg3qp6tTuI6iP/LPX2+8D49WxCx62v4LZy+5Qvvy2HW+gbjb7BipA9KQFIIV4BqDZtqDMkS0D1yTNj2P5DFAVtK8RSU0R3mVxPiinPwIqBLUNIEh4evIbpgJqXUNUQ11jzoSrpYItq6viEVMxeOnUJrQ7zdKVOyETNpAICJI7HrvoArNtGvZE6Hah38FKWncDQ9TwnX0IyQtQC+jLOC999L6um6YufmRP746TqN99oMUO6pEcHGMn/9pwhE6JQQ4CiocrwLzP/dnuqH4MVMX1GRx3fcd/HUnjlH8vqOJXGNsOy9Rh3BmVL/MfE6g0MW0QagWXwV0SVBMxxV9hEaBvNEvkq+RCnRylu5HMc28DriX6XwJcsLrYDGciU5WEsJJ2N5ea6Nbp+AbWLtB7n0c2uo5dgOKEUby74/emXwC9afc69ZRAxVE33xdFhs6Hftmc0mUeItUZGpd76gc2+6j65T/MUIGih9QCTyhk/f4pzQ3UdeojFOPhnARQhE2QOYa4rB1EC+6C30id/KLjcUe1usGyUfF+jUV+kwKU1FBDmc0reL+0tGBorN4r3lyg+uFeoroxSZKl4+4n1SlbWpgPMtWPPZjP08PZer0PoioeJ167gtkZ857Y68O0lXlZIDJhgJ1Lxyt8UzTf1o8PnqT1g6DmihlJANYw2tTndBVeu++3QTVs02Ls09CFpjnAjwEF6SKA6T2H7uOy9OBZWBu4+SBZgLvgWgJCWyNERM0A8rbiX7TwWnjfkQf47VNNOGK5O1vQ0UeGtKNvoN6OvuKvVqjkab/gsuEo2TTwkW95Gl+PsG64kM6GtvZyj5czbCjGHo3SEIaKlYK0EThEfPU1Ru3bKuJLzSfzlSOm7BlIVd7DLrSZa2PXD/0wQkL7vg8RhBmHAWe6YVrXMUaHu4O0yPHSGba2qj4Eqnc5Q4NcN9fT2lljYWS1858Eqi01Wm5pWeihhkg0BNQIqtGsAIujUJi4Qdx4Es8XO09Ck5awQfyfZgisEEHXQE8rEtXDuQHLtAS1h+zTXvEiu2o9jRl6IVZy2vM/nAAgR8hMl06in87DxvtIRH0QGxikwBwFgVrOCSOIl8dr0klVC1NyZDxZwbCnukmxZnDdHEaO0kOXD9C3QphB1kj6nhPIyPElM4sWWkp+Uzcfm6cy+uBE9brIa5oZhJ8mqRKQAe92PbXNMvUcd9gk9Rh66qR5BFyetO5GqTSQXPOCs5RUVO5IX9jocca8KwqHLwvMHdR7+QzUOC3oaUGb6DsOVHATFahv2UrP+9gblIQf0cBIMxAixzbjvCfvBHQitQDbRPHfxzWPfeKRvSW2HCjifAyxkBFsETo5oL0MXl3LU+mBtO+mhKlPhCF+5FJm3pLVx2Xr1Deiy5vmY6AyQTRw1JJwJjcy7eyTQC1LWOxjmJaVSwcr3BmQlKBCEeFRcBY0FHp4D2ZGJTzdiOelkQzQwokDwrFbxQgNfUeayV04bZ9J6jVMK7x4WX6YcArGa2W11OWw9QbOAh1H1lzmnilZ0m3SHpELHhwEIMN3kv/ZuAJtx0hmmUV3UrSnbUD0DGNMT7rAx4qVgot/9SfX+gkNsjG3Eab0fDTw0zr0sd/uIaNyCsVJ1IdA5VYaICbrMiPg9ZzNWOc+B9RreXEXd4zT3NOOjFypDRuodBnAvVBCK+kZoxzC1CyEHu4s9WlNInacEFA4YZRiD4ZmWxPJZr02N1A7QoJu0RXZBaIk1WZKFFqhrOHGWbghEBhoQdQA3DK2ZUYvY7qfw4qJU9gzb+xxJ9UmW9rGiWMIIR5KbpigS7rASrw6CvvKVALeAuuM6Na1iTC+PBhR9SNZAfewQ4byIuxpkVVPH5RUOLsek1MtcxvHCJ/9PEfpWqrSQlK7CD7taVhEHAgqeZrPAtNCNo5UUEANhzzXEdRgYaSSpIZ+TaSM4nfgZ4CYwe4C1DqB2lH9rkQIWIFR4I9wkkYqQ4NSf3IIkcYNY5gkHtonio7sdFwBBNrBaVTElW5a2CEqcFxdYr7Q0WAAgr7jDai1CC/ixLygPYxWrrKBynplHIMtVCyiddu4SWppGAzGY819L/cMnE8C1PJ64Yz9Q6AytBbWxTBV33rAKmFmaz4H1BJF1bCiJCeQEG2TcIJFg8dA7wV0oUjg8UZxQsSLkFPuUidXWeSlH0Tm2BYa60SCD2dTPAN1ooWGnVzRk9wnWAEKcpA4NL1o5IHyBc7q6YyyImgL0aXpA4PR3om2GNK4RFdQHSeQB2oFGRIb4vYx/O4Gggy5HxM8MZiTPbX06qMo5EWenXM9SKo39Pq9tAFuIKTswpFi1++TQROov7/05pyd9w02A4SFKuOzQL1yTQkTBw8Q2Pod1B6aB6KD53IUUlA8ORDOi29Lm9p1LSaeJC3UWkdJg6co3mk/yNIDreW5zG6gliT7KI4su0DrdZBuoqgFUYhtFH1OrCmwAQKPgUE6R6p9jEKGIa4bW4NOSOPyBd0Z4gXvikGEI+3F1tCQ/tHkU0VsDVQM2Lf0j8FkUN8r3YQN1KsqGk7uuv0eggrvyV2J6uX7henz2b4BVKOV7uaHnW8TPGHzSY4SvGqXYZ7Z38IqokGFrEKyQO0fKR+CMYxkVtE5FZS6tgZtxe0PibZ0L0D8bbAdDHNZ2grqfdPrM9v0Dkp7Jd+UZR2EiLvG54S1E1PJ7uiL0++8PTwx4jd6tuhZWpNxdcBUzGEvChY6ZJtu991jfhAAovO9O91chGFggUwmVkYkWggD/cqohhwNUTqVexg0eBXUb+crGOF3HSWHvm3sb9vbYHJM/lmg2uwCOlK/ioHDE1NsSJdBkEQNIrBJat81oYDrAckTeKLMUoWIAmofanekDeshK7TPQ9eWB/UkPIDq4A6qOF9uoAZ+GdmuaHjUrjZ3OmFF0YDO7MT20uTjC9TwSM8W/ouoRUpq3zE+QueK0k3D0HlOlkVXYHIvnkEn/gBUN9cxARKe07WuSRGW4GDWB3HzE2F8LUEHRiLF2YASW8T7dXWuAerpZd7Fm0BV+w6ZoDiRyX1Yp6Dcxx0laqEQ6opOHu1OTz93TJI6z8mmQoQq11YCciemrq18zdCDqL7YxjZIJAbaWwQOtKSGJRUhsJTgg2ubBGqakAionAqzNWePaSBUvzAsDEWJxgPlyV5ejJr4rp0AE2mt6eVIexNjQFEsJ2NOIVlTmgMGDMQw4D6aLrGJ/C+GdP9Ap9tjLsNnYcwCwiquXVK/ZFxGLegV08Gm44eWlghuaazJv1v8fCuoRsOqOudln6JT8Bde21v8DlBBRcZyjonFJTN1XmUKL44SfRcxJC33zA681jGM5BkQAHa4A36zuKkiqbNYsuOcPJEe/izEnVpMlgjEUQoCqiOo4ql6e9yIiNoS8IDaYJ3Norvai6yIUy3eDSNcaHsQn0j+S+Ni0If4c9jijQeqXyJP91pmPindNso3cgUG3VTOR8ZBqHGiPJJIKggDXo8gEk4NKZyU7mH4oamy3H4IVGMBgckdzlnTjzM0T3QfWaV5kNRewnKRkkpRpCd6A7Vn7GGhmWRYZUgacuQqUc8QUhc5t+8kQMHoPybolPy2JRrS1kTl14UGc9kQ9nnqLOrXiqRSyTV0TEaZiKxJdQApcXvlNFiIfjJNXcdoFP4bo+hieEM0l0Mnt7ICERB/OpkDnyS169NjcNzzTCU0CqqU1B6gHimMEoriY3LgAmpafmPsV2ZVGBg5QUwGV22K4mOgams1QLWcpSZ/CeAF/2FJ7ffFCBQ6RQstzSJ2NDlKkWe5Mr+IfxHFR1kkcjPJVGSRi/gRvzVpZ+CHQc5itcTRYhCdDkdyhZOkCqgpxACiinfDLkH8LaKU+IszHcrbkEJUq9jeRYI7E+320M9J8Q8Sm+J/A/lMzIEo1MSb93GPBGaVyhIpCVwIiBKcZJCLvkB8sUozbFqEnTL4AlBlyaj5EKg213whC9P/3EiWhBYOn6B+x+X+Mgn6kKAJbGiaX4gG4wQ1BU0lUMS5Ri9x14n2CYw80N2AVM2UZ8gLGb6GaHWTUB4kp/fbFs7L0qcEVKcU128EVBwXkBRxZRkmhCgxRNtxIsrT0HuMpXd0UqRb4Sz2ysBFmpHCmgaOKwFACe3SeLxvu2TVAwPb0sAgblI6kFW7AE8+QJfPAlsvymS4pfhNYstxCtRJ0QmC7mVZ74OgQlaNdTnVL1dpXMpb+rD3G8WX3DxC/qIvIqEWTBZwgbHtKFcZziGRAFzyMQaxWRJkYKSnlykcdVoMVXPcavUp6gM/oC1q3EqgglyLLWZF4BCQyxVBlKGEZPtR7pGQgxPnhERnKkKXzqPiUdycrpcQktQRPcmuJFIFs82WOdy6ZW+ME8bNN+rvfhIPgXdGVLcmB1KAkcMUbpIHZYtbjSEyUAiDwMW3LKveByp9XWbcW59bbZjH7Q3l1eCbYXSJgf47uL8LqqSdGWvj7emEPPG+KwcTPlmocpxebN5F8Frvi1QET6aat3t4XTJA4Bq2zy4EJqC7ppIlD18yxhGDM01aQHOlabc1LVGVvaR2pObltLNt3dIk37pxG4TiM8l6G5fm7m6UdyEtrNV1y7oMnjw+hk/xMOFDd9Kldf4+3phu7x7ognn2Qw3K9pZX+S5QAycx1LxK4zANRKSBPzS1OlB41XtB3dYlt8VFiGUqEjVJ2Tm2qFMlHlzhm3EquK1Flrpo7y2wMo7gQxhT2T3mxBvd5XQ9oSUobxyUpdSC5uEEBK2cFBfHRSkk92bvbq95urSZk2Gl02hsH6lP31xrwUcbkgzipdFDnrikBuTaNl0PqV13DWnlWI5OKnuSsezPZR8eKw25BPD7dbS2pcu9c54KHtd8+QMj+WlH6nKLKTm+Mgmesff5+0A15uzI4w4ywV9lKeEvsiXGdsL0qSwvJ2Y28KqzmG0ziTFrCx6WVzxF1aQWWMrrxfLX+aDV5XK1chKXHVABEMrBCWYf15K1wFMNKE2IFLNt8W1bl/des7eSr0xGI6WkfHh1VdIrGgA5rxZX+JaLk/SJ33xLnEs1Lrhe8mLVFL7woSrapirwHHI7R3DxvryUfHA8xam0qqiaxu33l9ei4SOnJ2OUlz8XC6w5sFuq6LtBZcABlGT0IcCyL+Kj8b91dhaibI2z71G/zHk1+gz6lt/K8nA+fyu/nc+HqxAdhaE9Fa7Xq23qKrNCCmPKqy2t9zYlg5/07S0jTKbmvZcTg9olMMWDHw5liSqthaSiI5VlF1YqdfIVCkkYQncWoBbsMwUjvKClTwf0vucOhqCuDgK2FZdS/S2Jyx9ZNaE+Y5FgO5P/tXFFwXjwLRdpg/QCDsHkIcvIqEqVTgNTNGerCszBUPiWCmfZsNAkFYxdk6XS9ot3ql9mzOqJS6hAlS99GNYBIM6r9+si2hkzjpgk9m2JZwRV68NZcxON/Oiz1sVT0zzhp4VnB86tDDBtmMUsJCuqLOSKa7mSN6xIhLRpSW2ogpj627dvGuBdrxrwHijN1al0klxgciFZafK084LJfZAC7lohvZPjFLkQCAJrQUCpylYX706u9KpiX3sWGVPAiusmuCLANx0EJaTlAX1bZJDULEtJp9meg9Y2vq7olDOGe1Wa+xAaS/47iRqAegIv4+KVDV6g0xKy+/uNTrL74FK801GC/p2Y7dApFddJ9SscMD+vzgNhn/KAx6DeA6qM75A+mpCec2IKUJ+aUIG7G18kGlgyqaR0uqq1Wa6upeYmtKfmthFCQKfM6PPT0xlQUiablvWYKhguUOm+krgmKG5T5kDNfRiAn/gA1CtTnOCG4KmlyQQqgchOV+qstrgnBm55fUZ0IcSLXziCbSdFxfTPU+5h3LM2azdMyRANRdy3LeOc8GI1tbVtnjhFybK2vbKxShWwOfUpgZpRN0s/0ASlLc0p+8Femt8DVd4UmjMc0vEtD5MfViheKGF5WYCzjEoqo92bk7nTzgWOrQFPAsu0HanZtkQe/NT5gw1b7ueJ9G1qpnxh0gGP+6rzTWJIo0YgIqxQ0Uz6bXLaHNM0ZVnRJNdgzElnHo+bMnbBO8ctObQ6ZSJ017I6iuMEtSg0y0TvFQWrQSMta1dt75VqBJi2RhOFCKHAZRMf0FK3spOK+gKKDSwPnCBtF7KavLIXigjuXxWXKEmaxjVb6mfbXCW3Oa3bsL2r2ff1kWVLCrO19Z6anL1PUqHjaFcHBf8ekjpuC1owsLSpIXJLjVfvAJWoFpI9BUDbDVT5gw76cHAHgBoO6okVKtl+ZBrZPNSOo4HTos2W9MusOkIjCR7QmxaYto6ybQxlNhNQssswRtBS5VYYAKgeRczRe5FJwzCt4JkmNAamDuNBa5AUW8kIbVB+ju6Wq29l1LidOy0ayfZuLPSnvkBQn+pj26ath76DByV280Q03W4Fq8plzmWw35lxRknKMZmhruhFpDFCQ5XpqOGstCDH6LzImBu9px+/BPXpCaD+aj3V0AmyfI8HZDasE2zqHJm548Iyw43idObhtb9v8X5f7vZ9sYl26uHZyJMH69S+6RfyMw0YETxSn2Hm6TI4cK7ImGJjZQVJQ9s13BaN8WaOaTdV5rKLHUdczXIL3xk3ZQ44QDMWaN8qqMMqi6A5NyJx16a1IfOS8GEclKevmOcxR8vxeW4B3AceMhXQU4a5vBBCl8bDQHgL85kzBOcsWd9Jm172OEimrYwX/cPFC5TcLDTcogp2kkBPi4driyb/0QbjH219zpon92tQMaWhZ8KYIKap65ybiOlpCB1fzoKBUbfIKN8J6g8L1K+SFYOBC4h3VWDUSFDVMMNRxbBgCcbZQQxxR8/YOc57NzCqGriVwHNjV4eT0xjstCxzhGLRVvJzWFcizviy5NLkoPJh5oui1DCxLbSbWAoWZol4NC6Xz91tySsfOBnoFV8QF2eNjud5sOJW8n023Qo6GodJwzjPDPbLsNjGtGqQcOGms4Ers6PL0eM8OSawYhxozzn91i35xW+BGiiiXB4fMUjgKG8GsJKgBISdDYPsxLCfDaq1U485lMr9AJae+nsCnBsHMNo4g8VBzGXgezANxNC4qXNqnrk7RBGLaZBIF47CAkacRwi/1XGKonxA8n4OOqwD2pkD1xZGAA39wLyKHnNwv/IdYMb6tDUh2DlA+KfRmLjcuLibA1Do7SIJ0aGbONpO5liS706dbdUah8VNA2yYMtNoR9TqFr74ccbA7LgM1qHJHspwgIGbIUW9k7d2hn8EVMqhCuDhFdqJ6ldihGJmV5JCtgSEu1H9LFC9miAOUBROMrfHO6b5OGhHWuWYTUW+HjHCKEy4QlCXgdlwdrvJMTXDmmGEZA6TTu4ABN3LBfbghs4ZMIeVF9Is9OQhnyvf0BdWqk/MwuW98kB17iA9Sw6wxtt40CeH6lbUD/P2UpsJoGJCk1OT4ibrV4BvCSp3PY12IZvMMKWOkGPwYDHwbS8BfTQHvTF4pe3b3/D4m5LqjQl8XGgNR0n1mqtv8gaIGazGtU8M89PVr8vnblOREfw73hcWLEDN7R1UTyM3jBgXGB4S43FmnCCpoDyNWALV+W7M15yJG/QA7A4qFyqCqFMNslI3BPHzZ5dDeBytofi7eCAg4P33oGLKTI0B3EcCl4tzGXZQ/dxZjMx1E64N0MB4loA2dL4qaVIHRWuP3uPaeSUPFHyEaXnP+81/D1RJ2R74anxQjd5v+qMHMP+eNpVB/pFk/2xQDciV81XR40hgp5vXTPVr/E39wgi6foTRpKECNmAFDAY3uQ72ybhd/Wo1jX6EbokTVe1d/U7UzFQ1ebfQLke/ON3NUIFxzr28a4SZHjqCkdD2S/Xbw45ShOceWnjO+9n7OEZhJlG/gA2sskCfwxfoJvgl0CXTxN5o2eco5KXK6wI1+Tx54Rj6C6Kw/hFQrQsmiLchoFpJ46bTC+9X0ePzz9L0P81RonqArgKZ4VSMD5K6yDu67o7SOk9BY6Y1jxNzV5bJYqopN9Eu3hylBZSELC30dhhY2h2lgQnc65hD64iTozw9oWF2nLvBAQdtDa2bk2rfOUqW41g6xzX5fkEb8JtGMdq7o7RMyi+mm8I4BK6qg+ECN+Mv0Xaiqj30EG0HeI4de3GUgLP2web/jE31Otdeslm87p7/YQTaVAiruOufDWouIgbTJxuzjHvwoJxW8qYmzzfdQJ8y9gwK+jz3+9Z2KxtpLWdcOTdyUWDpSTrZZuu0TD6S0fKyeMjzeS7NaEfnVclG3EAWNpKhReHLg75NaXaNwvMAxBiGyeV1jjIN5J7AXHarMLrA15pjesitg3A7tSRMr0r0BaHnQyaXTjLJgpKBeG61/1xQoYtoyfeXXskyRZievd2MLuYrL8dSAvR/pBhODeDuvsGvh6EYucc4KPvpL4Yr2spef/bXLrr44n2TXODvflEWqCL7H/pzF57yS5fjdx1AmGUxLRN3mb3ZZn4M1LC8+ndofv2HaeCew2L9d944yZ1/4ffNjeU8P+Xvqccly38FVB1H+YsWD3/d4vkLKOfXSy921v6H3g2r3/Sw3nETfuIGm2v9r4JKc6F9fvtrFuAubR84S6Zu+uFPYTywbnozxH9EULlbwfvffl56f57ukmFwNTf/KqiO4Bj9oDbUs03GjizKVym9vM8x9+c/9NcunHtrfVHVRrJGgvp3JRXztmDU7Y8JWcNJglYPomkf/xjR7Q9N5YK9/69gahhq8r8f0POidxnAkjnoP+MoFdnrpclMkTXeHLbi+O8cDvubxFrTuCbL/Mt38WWZZSJf9t7y1qW6t7aXfXJxtnJFm/nf7R+Tfs6JjXhJ+PfZ42kKa/8PkJv+9tSBQeUAAAAASUVORK5CYII=");
+  --maxw:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--plate);
+  color:var(--ink);
+  font-family:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+p{max-width:62ch}
+a{color:inherit}
+h1,h2,h3{line-height:1.05;letter-spacing:-.02em;margin:0}
+
+/* ---------- barra superior ---------- */
+.top{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;
+}
+.logo{
+  display:block;width:258px;max-width:62vw;aspect-ratio:468/72;
+  background:#fff var(--logo) center/contain no-repeat;
+  border:2px solid var(--gold);padding:5px 9px;border-radius:2px;
+}
+.logo-sm{width:190px}
+.top-meta{font-size:14px;color:var(--ink-2);font-weight:500}
+.top-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.ig{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  font-size:15px;font-weight:600;color:var(--ink);
+  border-bottom:1.5px solid transparent;padding-bottom:2px;transition:.15s ease;
+}
+.ig:hover{color:var(--filament);border-bottom-color:var(--filament)}
+.contact .ig{color:var(--paper)}
+.contact .ig:hover{color:var(--filament);border-bottom-color:var(--filament)}
+.contact-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:24px}
+.contact-actions .btn{margin-top:0}
+.jobs-ig{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:24px}
+.jobs-ig p{margin:0;font-size:16px;color:var(--ink-2)}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 64px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(42px,7.2vw,84px);font-weight:800;letter-spacing:-.045em}
+.hero h1 em{font-style:normal;display:block;color:var(--filament)}
+.hero p.lead{font-size:clamp(17px,2.1vw,21px);color:var(--ink-2);margin:22px 0 30px;font-weight:500}
+.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+
+.btn{
+  display:inline-block;background:var(--ink);color:var(--paper);
+  text-decoration:none;font-weight:700;font-size:16px;
+  padding:14px 22px;border-radius:3px;border:0;cursor:pointer;
+  transition:background .15s ease;
+}
+.btn:hover{background:var(--filament)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- animación de capas ---------- */
+.printer{width:100%;height:auto;display:block}
+.layer{opacity:0;animation:stack .12s ease-out forwards}
+.nozzle{animation:rise 2.9s linear forwards}
+@keyframes stack{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rise{from{transform:translateY(112px)}to{transform:translateY(-110px)}}
+.layer{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion:reduce){
+  .layer{opacity:1;animation:none}
+  .nozzle{animation:none;transform:translateY(-110px)}
+}
+
+/* ---------- estratos (divisor tipo capas) ---------- */
+.strata{height:14px;background:repeating-linear-gradient(to bottom,var(--line) 0 1px,transparent 1px 4px)}
+
+/* ---------- secciones ---------- */
+section{padding:64px 0}
+.eyebrow{font-size:14px;font-weight:700;color:var(--filament);margin:0 0 10px}
+h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin-bottom:18px}
+.sec-intro{color:var(--ink-2);font-size:18px}
+
+/* pasos (sí son una secuencia) */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;counter-reset:s}
+.step{border-top:2px solid var(--ink);padding-top:16px;counter-increment:s}
+.step::before{content:counter(s);display:block;font-weight:800;font-size:15px;color:var(--filament);margin-bottom:6px}
+.step h3{font-size:19px;font-weight:700;margin-bottom:6px}
+.step p{font-size:16px;color:var(--ink-2);margin:0}
+
+/* ficha de impresora */
+.machine{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.specs{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--line)}
+.specs li{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:16px}
+.specs li b{font-weight:700;flex:0 0 auto;text-align:right}
+.specs li span{color:var(--ink-2)}
+.note{background:var(--paper);border-left:3px solid var(--filament);padding:16px 18px;margin-top:28px;font-size:16px}
+.note p{margin:0}
+
+/* cotización */
+.quote{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;margin-top:38px;align-items:start}
+.quote h3{font-size:19px;font-weight:700;margin-bottom:14px}
+.factors{list-style:none;margin:0;padding:0}
+.factors li{font-size:16px;color:var(--ink-2);padding:8px 0 8px 21px;position:relative;max-width:50ch}
+.factors li::before{content:"";position:absolute;left:0;top:17px;width:11px;height:1px;background:var(--filament)}
+.quote-cta{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--filament);border-radius:4px;padding:30px}
+.quote-cta p{font-size:16px;color:var(--ink-2);margin:0 0 22px}
+
+/* material */
+.mat-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:38px}
+.mat-grid .specs{margin-top:0}
+.use-block{margin-bottom:26px}
+.use-block h3{font-size:18px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.use-block h3::before{content:"";width:12px;height:12px;border-radius:2px;flex:0 0 auto}
+.use-ok h3::before{background:var(--filament)}
+.use-no h3::before{background:var(--line);border:1px solid var(--ink-2)}
+.use-block ul{list-style:none;margin:0;padding:0}
+.use-block li{font-size:16px;color:var(--ink-2);padding:7px 0 7px 21px;position:relative;max-width:46ch}
+.use-block li::before{content:"";position:absolute;left:0;top:16px;width:11px;height:1px;background:var(--line)}
+
+/* trabajos */
+.jobs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:38px}
+.job{background:var(--plate);padding:26px 24px}
+.job h3{font-size:19px;font-weight:700;margin-bottom:8px}
+.job p{font-size:15px;color:var(--ink-2);margin:0}
+
+/* makerworld */
+.mw{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.mw-card{background:var(--ink);color:var(--paper);padding:34px;border-radius:4px}
+.mw-card h3{font-size:24px;font-weight:800;margin-bottom:12px}
+.mw-card p{color:#C8D0CA;font-size:16px;margin:0 0 22px}
+.mw-card .btn{background:var(--filament);color:#fff}
+.mw-card .btn:hover{background:var(--paper);color:var(--ink)}
+
+/* aviso: no modelo */
+.disclaim{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:38px}
+.disclaim h2{margin-bottom:16px}
+.disclaim ul{margin:20px 0 0;padding-left:20px;color:var(--ink-2)}
+.disclaim li{margin-bottom:8px;max-width:60ch}
+
+/* contacto */
+.contact{background:var(--ink);color:var(--paper);padding:72px 0}
+.contact h2{color:var(--paper)}
+.contact p{color:#C8D0CA}
+.contact .btn{background:var(--filament);color:#fff;margin-top:24px}
+.contact .btn:hover{background:var(--paper);color:var(--ink)}
+.send-list{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,260px));gap:10px 28px}
+.send-list li{border-top:1px solid #3A463F;padding-top:9px;font-size:15px;color:#C8D0CA}
+footer{padding:26px 0;font-size:14px;color:var(--ink-2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+a.link{color:var(--filament);font-weight:600}
+:focus-visible{outline:2px solid var(--filament);outline-offset:3px}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;gap:28px;padding:40px 0 48px}
+  .hero-art{order:-1;max-width:260px}
+  .steps,.jobs{grid-template-columns:1fr 1fr}
+  .machine,.mw,.mat-grid{grid-template-columns:1fr;gap:34px}
+  .quote{grid-template-columns:1fr;gap:30px}
+}
+@media(max-width:560px){
+  .steps,.jobs{grid-template-columns:1fr}
+  .send-list{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .quote-cta,.disclaim{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="#" aria-label="Lalocura Impresiones 3Ds"></a>
+  <div class="top-right">
+    <span class="top-meta">Impresión 3D bajo pedido · Tijuana, B.C.</span>
+    <a class="ig" href="https://www.instagram.com/lalocura_impresiones_3ds/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>@lalocura_impresiones_3ds</span></a>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Tú traes el archivo,<em>yo lo imprimo.</em></h1>
+    <p class="lead">Servicio de impresión 3D en PLA, en una Bambu Lab A1. Mándame el modelo y te digo cuánto sale antes de encender la máquina.</p>
+    <div class="hero-actions">
+      <a class="btn wa" href="#contacto">Cotiza tu impresión</a>
+      <a class="btn btn-ghost" href="#trabajos">Ver qué se puede imprimir</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <svg class="printer" viewBox="0 0 300 340" role="img" aria-label="Una pieza construyéndose capa por capa">
+      <defs>
+        <linearGradient id="fil" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#FF4D00"/>
+          <stop offset="100%" stop-color="#FF9466"/>
+        </linearGradient>
+      </defs>
+      <rect x="30" y="302" width="240" height="4" fill="#16221C"/>
+      <rect x="44" y="306" width="212" height="8" fill="#C3C8BE"/>
+      <g fill="url(#fil)">
+        <rect class="layer" style="animation-delay:.10s" x="90"  y="291" width="120" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.22s" x="84"  y="281" width="132" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.34s" x="79"  y="271" width="142" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.46s" x="75"  y="261" width="150" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.58s" x="72"  y="251" width="156" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.70s" x="70"  y="241" width="160" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.82s" x="69"  y="231" width="162" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:.94s" x="69"  y="221" width="162" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.06s" x="70" y="211" width="160" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.18s" x="72" y="201" width="156" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.30s" x="75" y="191" width="150" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.42s" x="79" y="181" width="142" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.54s" x="83" y="171" width="134" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.66s" x="87" y="161" width="126" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.78s" x="90" y="151" width="120" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:1.90s" x="92" y="141" width="116" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.02s" x="93" y="131" width="114" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.14s" x="93" y="121" width="114" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.26s" x="92" y="111" width="116" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.38s" x="90" y="101" width="120" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.50s" x="87" y="91"  width="126" height="9" rx="1"/>
+        <rect class="layer" style="animation-delay:2.62s" x="84" y="81"  width="132" height="9" rx="1"/>
+      </g>
+      <g class="nozzle" fill="#16221C">
+        <rect x="236" y="176" width="34" height="22" rx="2"/>
+        <path d="M248 198 h10 l-3 12 h-4 z"/>
+        <rect x="252" y="146" width="4" height="30"/>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap"><div class="strata"></div></div>
+
+<section class="wrap" id="que-es">
+  <p class="eyebrow">Lo básico</p>
+  <h2>Qué es una impresión 3D</h2>
+  <p class="sec-intro">Una impresora 3D FDM derrite filamento de plástico y lo va depositando en capas de menos de medio milímetro de alto. Capa sobre capa, hasta que la pieza queda completa. No se talla ni se moldea: se construye desde abajo, y por eso cada pieza existe físicamente apenas unas horas después de tener el archivo.</p>
+  <div class="steps">
+    <div class="step">
+      <h3>El archivo</h3>
+      <p>Todo empieza con un modelo 3D (.stl o .3mf). Es el plano digital de la pieza, en volumen.</p>
+    </div>
+    <div class="step">
+      <h3>El laminado</h3>
+      <p>Un programa corta ese modelo en cientos de capas y calcula la ruta del extrusor, el tiempo y los gramos exactos que va a gastar.</p>
+    </div>
+    <div class="step">
+      <h3>La impresión</h3>
+      <p>La máquina recorre capa por capa. De ahí salen los gramos con los que se cobra, y la pieza lista para lijar, pintar o usar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap machine" id="impresora">
+  <div>
+    <p class="eyebrow">La máquina</p>
+    <h2>Bambu Lab A1</h2>
+    <p>Es una impresora de extrusión directa, rápida y con calibración automática en cada arranque: mide la cama, compensa la vibración y ajusta el flujo antes de la primera capa. En la práctica eso significa piezas parejas, con menos fallas y sin tener que estar corrigiendo a media impresión.</p>
+    <div class="note">
+      <p>¿Tu pieza es más grande que el área de impresión? Se puede partir en secciones y unirlas después. Se cotiza igual: por el total de gramos.</p>
+    </div>
+  </div>
+  <div>
+    <ul class="specs">
+      <li><span>Área de impresión</span><b>256 × 256 × 256 mm</b></li>
+      <li><span>Altura de capa</span><b>0.08 – 0.28 mm</b></li>
+      <li><span>Material</span><b>PLA, en todos los trabajos</b></li>
+      <li><span>Velocidad máxima</span><b>500 mm/s</b></li>
+      <li><span>Cama</span><b>Caliente, con nivelación automática</b></li>
+      <li><span>Color</span><b>Un color por pieza</b></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap" id="precio">
+  <p class="eyebrow">Cómo se cobra</p>
+  <h2>Se cobra por lo que pesa la pieza</h2>
+  <p class="sec-intro">Antes de imprimir, el programa de laminado me dice exactamente cuántos gramos de filamento lleva tu modelo. De ahí sale el precio, y por eso cada trabajo se cotiza aparte: no es lo mismo un llavero que una maqueta.</p>
+
+  <div class="quote">
+    <div>
+      <h3>Lo que hace que suba o baje</h3>
+      <ul class="factors">
+        <li>El tamaño de la pieza y qué tanto relleno necesita por dentro.</li>
+        <li>Si la forma obliga a imprimir soportes: también gastan filamento.</li>
+        <li>Cuántas copias quieres, porque varias piezas juntas salen mejor.</li>
+        <li>El acabado: una pieza para lijar y pintar lleva más trabajo que una lisa.</li>
+      </ul>
+    </div>
+    <div class="quote-cta">
+      <h3>¿Cuánto sale la tuya?</h3>
+      <p>Mándame el enlace del modelo o el archivo y te regreso el peso en gramos, el precio y para cuándo lo tengo. Cotizar no te cuesta nada.</p>
+      <a class="btn wa" href="#">Cotiza tu impresión</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <p>Los soportes y la balsa también se imprimen con filamento, así que cuentan dentro del peso. Si el modelo se puede orientar para ahorrarlos, lo hago: sale más barato para ti.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="strata"></div></div>
+
+<section class="wrap" id="material">
+  <p class="eyebrow">El material</p>
+  <h2>Todo se imprime en PLA</h2>
+  <p class="sec-intro">Trabajo un solo filamento: PLA. Es el que da mejor detalle, el que menos se encoge al enfriarse y el más estable para piezas que tienen que embonar. Estos son sus números y sus límites, para que sepas qué esperar de tu pieza antes de pedirla.</p>
+  <div class="mat-grid">
+    <ul class="specs">
+      <li><span>Resistencia a la tracción</span><b>50 – 60 MPa</b></li>
+      <li><span>Rigidez (módulo elástico)</span><b>3.0 – 3.6 GPa</b></li>
+      <li><span>Resistencia al impacto</span><b>Baja: es duro, pero quebradizo</b></li>
+      <li><span>Se empieza a ablandar</span><b>55 – 60 °C</b></li>
+      <li><span>Estabilidad dimensional</span><b>Alta, casi no se alabea</b></li>
+      <li><span>Acabado</span><b>Se lija, se pega y se pinta</b></li>
+      <li><span>Vida útil bajo techo</span><b>Años, sin deformarse</b></li>
+    </ul>
+    <div class="mat-use">
+      <div class="use-block use-ok">
+        <h3>Donde el PLA se porta bien</h3>
+        <ul>
+          <li>Piezas de interior: carcasas, soportes, organizadores.</li>
+          <li>Figuras y detalles finos, porque copia bien la geometría.</li>
+          <li>Piezas que embonan con otras: mantiene la medida.</li>
+          <li>Maquetas y prototipos que se van a manipular y guardar.</li>
+          <li>Todo lo que después se va a lijar o pintar.</li>
+        </ul>
+      </div>
+      <div class="use-block use-no">
+        <h3>Donde se le complica</h3>
+        <ul>
+          <li>Adentro del carro bajo el sol: a esa temperatura se deforma.</li>
+          <li>Junto a motores, focos o cualquier fuente de calor.</li>
+          <li>A la intemperie por meses: el sol lo vuelve más quebradizo.</li>
+          <li>Golpes fuertes o peso colgando de forma constante.</li>
+          <li>Piezas que van a lavarse con agua caliente.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="note">
+    <p>Si tu pieza va a vivir al aire libre o a aguantar calor, dímelo antes: a veces se resuelve con más relleno, más paredes o rediseñando la pieza, y si de plano no da, te lo digo en lugar de venderte algo que se te va a echar a perder.</p>
+  </div>
+</section>
+
+<section class="wrap" id="trabajos">
+  <p class="eyebrow">Qué se puede imprimir</p>
+  <h2>Tipos de trabajo</h2>
+  <div class="jobs">
+    <div class="job">
+      <h3>Carcasas</h3>
+      <p>Cajas para proyectos de electrónica, fuentes, sensores o equipo. Con sus cortes para puertos, botones y tornillos.</p>
+    </div>
+    <div class="job">
+      <h3>Llaveros</h3>
+      <p>Piezas chicas y rápidas, con nombre, logo o forma. Salen baratas porque pesan poquísimo.</p>
+    </div>
+    <div class="job">
+      <h3>Figuras en un solo color</h3>
+      <p>Figuras decorativas o coleccionables en un color. Quedan listas para pintarse si quieres darles acabado.</p>
+    </div>
+    <div class="job">
+      <h3>Piezas con detalle</h3>
+      <p>Trabajos con relieve fino o tolerancias justas: engranes, adaptadores, refacciones y piezas que embonan.</p>
+    </div>
+    <div class="job">
+      <h3>Regalos</h3>
+      <p>Detalles personalizados para cumpleaños, aniversarios o graduaciones, con nombres y fechas incluidos en el modelo.</p>
+    </div>
+    <div class="job">
+      <h3>Proyectos arquitectónicos</h3>
+      <p>Maquetas, volúmenes y terrenos para entrega de proyecto. Las piezas grandes se imprimen por secciones.</p>
+    </div>
+  </div>
+  <div class="jobs-ig">
+    <p>Aquí van las piezas que ya salieron de la impresora, en fotos y no en descripciones.</p>
+    <a class="ig" href="https://www.instagram.com/lalocura_impresiones_3ds/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>Ver trabajos en @lalocura_impresiones_3ds</span></a>
+  </div>
+</section>
+
+<section class="wrap mw" id="modelos">
+  <div>
+    <p class="eyebrow">De dónde sale el modelo</p>
+    <h2>Busca tu pieza en MakerWorld</h2>
+    <p>MakerWorld es la biblioteca de modelos de Bambu Lab: miles de archivos gratis, ya probados en esta misma impresora. Busca lo que quieras, copia el enlace del modelo y mándamelo. Yo reviso que se pueda imprimir bien, lo laminó y te paso el peso y el precio antes de arrancar.</p>
+  </div>
+  <div class="mw-card">
+    <h3>MakerWorld</h3>
+    <p>Abre el catálogo, encuentra tu modelo y mándame el enlace por WhatsApp.</p>
+    <a class="btn" href="https://makerworld.com" target="_blank" rel="noopener">Abrir MakerWorld</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="disclaim" id="modelado">
+    <p class="eyebrow">Importante</p>
+    <h2>Yo imprimo, no modelo</h2>
+    <p>No hago diseño 3D. Si tu idea todavía no existe como archivo, necesitas a alguien que la modele — y que la modele pensando en impresión, que no es lo mismo que modelar bonito.</p>
+    <ul>
+      <li>Paredes con grosor suficiente para que la pieza no se quiebre.</li>
+      <li>Geometría cerrada, sin caras sueltas ni huecos en la malla.</li>
+      <li>Orientación y ángulos que eviten soportes por todos lados.</li>
+      <li>Tolerancias reales si la pieza tiene que embonar con algo.</li>
+    </ul>
+    <p style="margin-top:22px">Cuando tengas ese archivo, aquí estoy. Y si prefieres no mandar a modelar nada, casi siempre hay algo parecido en <a class="link" href="https://makerworld.com" target="_blank" rel="noopener">MakerWorld</a> que se puede usar tal cual.</p>
+  </div>
+</section>
+</main>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <h2>Pide tu impresión</h2>
+    <p>Mándame el enlace del modelo o el archivo por WhatsApp. Te regreso el peso en gramos, el precio y para cuándo lo tengo.</p>
+    <ul class="send-list">
+      <li>Enlace de MakerWorld o archivo .stl / .3mf</li>
+      <li>Color que quieres</li>
+      <li>Cuántas piezas</li>
+      <li>Para cuándo lo necesitas</li>
+    </ul>
+    <div class="contact-actions">
+      <a class="btn" id="wa-btn" href="#">Escribir por WhatsApp</a>
+      <a class="ig" href="https://www.instagram.com/lalocura_impresiones_3ds/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>Mira los trabajos en Instagram</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><footer>
+  <span class="logo logo-sm" role="img" aria-label="Lalocura Impresiones 3Ds"></span>
+  <span>Tijuana, B.C. · Bambu Lab A1 · Impresión en PLA bajo pedido</span>
+  <a class="ig" href="https://www.instagram.com/lalocura_impresiones_3ds/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg><span>@lalocura_impresiones_3ds</span></a>
+</footer></div>
+
+<script>
+/* =========================================================
+   EDITA AQUÍ  —  estos son los únicos datos que cambian
+   ========================================================= */
+const WHATSAPP = "5216634285834";  // 663 428 5834 (52 + 1 + número)
+/* ========================================================= */
+
+const liga = 'https://wa.me/' + WHATSAPP + '?text=' +
+  encodeURIComponent('Hola, quiero cotizar una impresión 3D. Te paso el modelo:');
+
+document.getElementById('wa-btn').href = liga;
+
+/* Los botones que bajan a otra sección hacen scroll con JS, sin tocar la barra
+   de direcciones: así no sale el aviso de "enlace externo" en vistas previas. */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const destino = document.querySelector(a.getAttribute('href'));
+    if(!destino) return;
+    e.preventDefault();
+    destino.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+document.querySelectorAll('a.wa').forEach(a => {
+  if(a.getAttribute('href') === '#') a.href = liga;
+});
+</script>
+</body>
+</html>
